@@ -113,6 +113,7 @@ Enable & start the net-agentd daemon:
 	systemctl start net-agentd
 
 **Centos 8:**
+
 Install Net-Agent rpm:
 
 	rpm -i Net-Agent-0.1-1.el8.x86_64.rpm
@@ -130,6 +131,7 @@ Enable & start the net-agentd daemon:
 	systemctl start net-agentd
 
 **Ubuntu 18.04:**
+
 Install Net-Agent deb:
 
 	dpkg -i Net-Agent-0.1-0.Ubuntu18.04-x86.deb
