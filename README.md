@@ -1,8 +1,19 @@
+
 # RemoteCLI
 
- Remote-CLI provides a web management portal to execute command line commands and remotely transfer scripts to your cloud servers. 
+ Remote-CLI provides a web management portal to execute command line commands and remotely transfer scripts to your cloud servers.  Remote-CLI utilizes Openssl v1.1.1, spdlog, mysql c++ connector, and Andrew Schwartzmeyer's algorithm for breaking up files all of which can be found at the following:
+ 
+ https://github.com/openssl/openssl
+ 
+ https://github.com/gabime/spdlog
+ 
+ https://github.com/mysql/mysql-connector-cpp
+ 
+ https://gist.github.com/andschwa/d120be76ba8ebd66cf50
+ 
+ 
 
-
+<br><br><br>
 
 
 
@@ -147,3 +158,25 @@ Enable & start the net-agentd daemon:
 
 	systemctl enable net-agentd
 	systemctl start net-agentd
+	
+	
+<hr>
+<br><br><br>
+
+## Tips/Caveats/Bugs:
+
+
+   
+
+ 1. Due to openssl's ssl_write/ssl_read buffer being limited to 16384, script transfers utilize Andrew Schwartzmeyer's Algorithm to break up files before transmission.
+ 2. Currently files bigger than 2.14 Gb or 2147483647 bytes are too large for transfer due to INT_MAX limitation.
+ 3. Due to a coding issue, the "clientkey" entry in .agentconfig must remain at the bottom of the agent configuration file in order for the registration process to properly function.
+ 4. Net-Agents logs to /var/log/net-agentd/net-agentd.log and the net-agentd configuration file can be found at: */opt/net-agent/net-agentd/.agentconfig*
+ 5. Net-Controller logs to /var/log/net-controllerd/net-controllerd.log and the net-controller configuration file can be found at: */opt/net-controller/net-controllerd/.serverconfig*
+
+    
+    
+
+
+
+
