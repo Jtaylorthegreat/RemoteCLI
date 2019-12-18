@@ -21,7 +21,7 @@
 
 # Installation Guide:
 
-## **Net-Controller**
+## **Net-Controller (server daemon)**
 
 <br>
 
@@ -103,7 +103,7 @@ Add Firewall Rules:
 
 <hr>
 
-## Agent Installation
+## Net-Agent Installation (client daemon)
 
 **Centos 7:** 
 
