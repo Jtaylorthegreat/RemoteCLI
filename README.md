@@ -1,4 +1,5 @@
 
+
 # RemoteCLI
 
  Remote-CLI provides a web management portal to execute command line commands and remotely transfer scripts to your cloud servers.  Remote-CLI utilizes Openssl v1.1.1, spdlog, mysql c++ connector, and Andrew Schwartzmeyer's algorithm for breaking up files all of which can be found at the following:
@@ -176,7 +177,14 @@ Enable & start the net-agentd daemon:
 
     
     
+<br><br><br><br><hr>
+## Screenshots:
+<br>
 
+![overview](https://raw.githubusercontent.com/jtaylorthegreat/RemoteCLI/master/Screenshots/screenshot1.jpg)
 
+![agents list](https://raw.githubusercontent.com/jtaylorthegreat/RemoteCLI/master/Screenshots/screenshot2.jpg)
+
+![agent information/actions](https://raw.githubusercontent.com/jtaylorthegreat/RemoteCLI/master/Screenshots/screenshot3.jpg)
 
 
