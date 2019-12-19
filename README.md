@@ -2,7 +2,7 @@
 
 # RemoteCLI
 
- Remote-CLI provides a web management portal to execute command line commands and remotely transfer scripts to your cloud servers.  Remote-CLI utilizes Openssl v1.1.1, spdlog, mysql c++ connector, and Andrew Schwartzmeyer's algorithm for breaking up files all of which can be found at the following:
+ Remote-CLI provides a web management portal to execute command line commands and remotely transfer scripts to your cloud servers.  Remote-CLI's backend daemons are written in C++ while the web front end was solely written in php. Remote-CLI also utilizes Openssl v1.1.1, spdlog, mysql C++ connector, and Andrew Schwartzmeyer's algorithm for breaking up files all of which can be found at the following:
  
  https://github.com/openssl/openssl
  
@@ -14,10 +14,18 @@
  
  
 
-<br><br><br>
+<br>
 
+## Screenshots:
+<br>
 
+![overview](https://raw.githubusercontent.com/jtaylorthegreat/RemoteCLI/master/Screenshots/screenshot1.jpg)
 
+![agents list](https://raw.githubusercontent.com/jtaylorthegreat/RemoteCLI/master/Screenshots/screenshot2.jpg)
+
+![agent information/actions](https://raw.githubusercontent.com/jtaylorthegreat/RemoteCLI/master/Screenshots/screenshot3.jpg)
+
+<br>
 
 
 # Installation Guide:
@@ -87,7 +95,7 @@ Create user & database for Net-Controller:
 	flush privileges;
 Install Net-Controller deb:
 
-	dpkg -i net-controller-0.1-0.deb
+	dpkg -i Net-Controller-0.1-0.Ubuntu18.04-x86_64.deb
 Update "agentregistrationkey" for Net-Controller:	
 
 	vi /opt/net-controller/net-controllerd/.serverconfig  
@@ -176,15 +184,4 @@ Enable & start the net-agentd daemon:
  5. Net-Controller logs to /var/log/net-controllerd/net-controllerd.log and the net-controller configuration file can be found at: */opt/net-controller/net-controllerd/.serverconfig*
 
     
-    
-<br><br><br><br><hr>
-## Screenshots:
-<br>
-
-![overview](https://raw.githubusercontent.com/jtaylorthegreat/RemoteCLI/master/Screenshots/screenshot1.jpg)
-
-![agents list](https://raw.githubusercontent.com/jtaylorthegreat/RemoteCLI/master/Screenshots/screenshot2.jpg)
-
-![agent information/actions](https://raw.githubusercontent.com/jtaylorthegreat/RemoteCLI/master/Screenshots/screenshot3.jpg)
-
 
